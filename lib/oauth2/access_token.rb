@@ -1,9 +1,9 @@
 module OAuth2
   class AccessToken
-    attr_reader :client, :token, :refresh_token, :instance_url, :expires_in, :expires_at
+    attr_reader :client, :token, :refresh_token, :expires_in, :expires_at, :instance_url
     attr_accessor :token_param
 
-    def initialize(client, token, refresh_token = nil, instance_url = nil, expires_in = nil, params = {})
+    def initialize(client, token, refresh_token = nil, expires_in = nil, instance_url = nil, params = {})
       @client = client
       @token = token.to_s
       @refresh_token = refresh_token.to_s
